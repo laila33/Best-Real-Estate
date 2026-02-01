@@ -12,7 +12,7 @@ function Hero_Section() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="flex flex-col gap-3 lg:mt-40"
       >
-        <h1 className="w-120 text-[#102d47] dark:text-white font-bold text-2xl md:text-5xl">
+        <h1 className=" text-[#102d47] dark:text-white font-bold text-2xl md:text-5xl">
           Find Your Best Real Estate
         </h1>
 
