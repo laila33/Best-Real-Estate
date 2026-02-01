@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 function Why_People_Choose_Property() {
   return (
-    <div className=" max-w-full p-2 md:px-40 mt-10 lg:mt-40 flex flex-col  lg:flex lg:flex-row relative h-[600px]">
+    <div className="overflow-hidden max-w-full p-2 md:px-40 mt-10 lg:mt-40 flex flex-col  lg:flex lg:flex-row relative h-auto">
       <div className="hidden lg:flex relative w-150">
         <img
           src="../features_iimage.jpg"

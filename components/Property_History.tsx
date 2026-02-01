@@ -2,7 +2,7 @@ import React from 'react'
 
 function Property_History() {
   return (
-    <div className='mt-100 md:mt-30'>Property_History</div>
+    <div className='mt-60 md:mt-30'>Property_History</div>
   )
 }
 
