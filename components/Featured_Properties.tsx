@@ -161,9 +161,9 @@ function Featured_Properties() {
                   <span className="text-2xl font-bold text-blue-600">
                     {property.price}
                   </span>
-                  <button className="bg-[#102D47] text-white px-6 py-2 rounded-xl hover:bg-blue-600 transition-colors">
+                  {/* <button className="bg-[#102D47] text-white px-6 py-2 rounded-xl hover:bg-blue-600 transition-colors">
                     Details
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </motion.div>
