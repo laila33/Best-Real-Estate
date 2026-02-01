@@ -13,7 +13,7 @@ import React from 'react'
 function page() {
   return (
     <div>
-      <NavBar />
+      {/* <NavBar /> */}
       <Hero_Section />
       <Discover_Properties />
       <Featured_Properties/>
@@ -22,7 +22,7 @@ function page() {
       <Property_History />
       <Customer />
       <BlogPost />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

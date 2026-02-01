@@ -10,7 +10,7 @@ function Save_Your_Money() {
   return (
     <div className="p-2 md:px-40  mt-10 lg:mt-40 flex flex-col lg:flex lg:flex-row justify-between  mb-30">
       <div className=" flex flex-col gap-4 mt-30">
-        <h1 className="self-start text-3xl lg:text-5xl text-[#102D47] font-bold">
+        <h1 className="self-start text-3xl lg:text-5xl dark:text-white text-[#102D47] font-bold">
           Save Your Money
         </h1>
         <p className="text-gray-400 w-70 md:w-120">

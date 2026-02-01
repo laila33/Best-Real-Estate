@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { DM_Sans } from 'next/font/google';
 import { Providers } from "@/components/provider";
+import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 
 
 const dmSans = DM_Sans({ 
@@ -34,7 +36,11 @@ export default function RootLayout({
       <body
         className={`${dmSans.className} antialiased`}
       >
-      <Providers>  {children} </Providers>
+      <Providers>
+        <NavBar />
+          {children} 
+          <Footer/>
+          </Providers>
       </body>
     </html>
   );

@@ -32,7 +32,7 @@ function Hero_Section() {
             </Tabs.Trigger>
           </Tabs.List>
 
-          <div className= "w-70 md:w-150 bg-white dark:bg-black p-15 shadow-2xl rounded-b-2xl rounded-tr-2xl border border-gray-100">
+          <div className= "w-75 md:w-150 bg-white dark:bg-black p-15 shadow-2xl rounded-b-2xl rounded-tr-2xl border border-gray-100">
             <Tabs.Content
               value="buy"
               className="flex flex-wrap md:flex-nowrap gap-6 items-end outline-none"

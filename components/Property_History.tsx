@@ -13,7 +13,7 @@ function Property_History() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="p-10 md:p-50 bg-[#F3F9FD] w-3/4 h-auto flex flex-col justify-center"
       >
-        <h1 className="text-4xl font-bold mb-60 md:mb-0">
+        <h1 className="dark:text-black text-4xl font-bold mb-60 md:mb-0">
           Property History
           <br />
           How we became number one
@@ -40,7 +40,7 @@ function Property_History() {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }} 
         className="absolute right-10 md:right-40 mt-40 w-60 h-80 bg-[#FFFFFF] rounded-2xl p-6 border-blue-600 border-4 shadow-2xl z-10"
       >
-        <h1 className="text-2xl font-bold leading-tight">BEST REAL ESTATE COMPANY</h1>
+        <h1 className="dark:text-black text-2xl font-bold leading-tight">BEST REAL ESTATE COMPANY</h1>
         
         <div className="flex mt-15 gap-6 items-end">
           <div className="flex flex-col">
@@ -49,7 +49,7 @@ function Property_History() {
               <br />
               Experience
             </p>
-            <p className="text-5xl font-bold">33</p>
+            <p className="text-5xl font-bold dark:text-black">33</p>
           </div>
           <img src="../logo (1).svg" alt="logo" className="w-12 h-12" />
         </div>

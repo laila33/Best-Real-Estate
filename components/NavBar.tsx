@@ -6,11 +6,13 @@ import { ChevronDown, Moon, TextAlignJustify, Sun } from "lucide-react";
 import { X } from "lucide-react";
 import { SignupModal } from "./SignupModal";
 import { SigninModal } from "./SigninModal";
+import { usePathname } from "next/navigation";
+// import Link from "next/link";
 // import { useTheme } from "next-themes";
 function NavBar() {
   const [isSignupOpen, setIsSignupOpen] = useState(false);
   const [isSigninOpen, setIsSiginpOpen] = useState(false);
-
+  const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [theme, setTheme] = useState("light");
   useEffect(() => {
@@ -28,20 +30,26 @@ function NavBar() {
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
+  const isPropertiesActive = pathname.startsWith("/properties");
   return (
     <div className=" relative p-2 md:px-40 mt-10 flex items-center justify-between">
       <div>
-        <img
-          src="../logo.svg"
-          className="w-[150px] md:w-[250px] lg:w-[260px]"
-        />
+        <Link href="/">
+          <img src="../logo.svg" alt="Logo" className="cursor-pointer" />
+        </Link>
       </div>
       <div className="hidden  lg:flex items-center gap-10 text-2xl  ">
-        <Link href={"#"} className="text-blue-500">Home</Link>
+        <Link href="/" className="hover:text-blue-600 transition-colors">
+          Home
+        </Link>
         <details>
           <summary className="list-none cursor-pointer flex items-center">
-            Properties
-            {/* <ChevronDown /> */}
+            <Link
+              href="/properties"
+              className={isPropertiesActive ? "text-blue-600" : ""}
+            >
+              Properties
+            </Link>
           </summary>
           <ul className="absolute">
             <li>{/* <a>Property List</a> */}</li>
@@ -49,7 +57,15 @@ function NavBar() {
           </ul>
         </details>
         <details>
-          <summary className="list-none cursor-pointer flex items-center">
+          <summary
+            className={
+              pathname.startsWith("/blog")
+                ? "text-blue-500 font-bold"
+                : "text-black dark:text-white list-none cursor-pointer flex items-center "
+            }
+
+            // "list-none cursor-pointer flex items-center "
+          >
             Blog
             {/* <ChevronDown /> */}
           </summary>
@@ -83,7 +99,7 @@ function NavBar() {
           )}
         </div>
         <button
-          onClick={() => setIsSiginpOpen(true)} 
+          onClick={() => setIsSiginpOpen(true)}
           className="hidden lg:block p-3 rounded-xl text-blue-500 border border-blue-500 bg-white  cursor-pointer hover:bg-blue-500 hover:text-white"
         >
           Sign In

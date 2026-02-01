@@ -18,7 +18,7 @@ export function CustomHorizontalTimeline() {
             </div>
 
             <div className="mt-4 text-center">
-              <h3 className=" text-sm md:text-2xl font-bold text-slate-800">{item.percentage} Save</h3>
+              <h3 className=" text-sm md:text-2xl font-bold dark:text-white text-slate-800">{item.percentage} Save</h3>
               <p className="text-slate-500 text-sm">{item.amount}</p>
             </div>
           </div>
