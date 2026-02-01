@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 function Why_People_Choose_Property() {
   return (
-    <div className="p-2 md:px-40 mt-10 lg:mt-40 flex flex-col  lg:flex lg:flex-row relative h-[600px]">
+    <div className=" max-w-full p-2 md:px-40 mt-10 lg:mt-40 flex flex-col  lg:flex lg:flex-row relative h-[600px]">
       <div className="hidden lg:flex relative w-150">
         <img
           src="../features_iimage.jpg"
@@ -45,7 +45,7 @@ function Why_People_Choose_Property() {
       </div>
       <div className="ms-10 flex flex-col gap-5 ">
         <p className="text-4xl font-bold ">Why People Choose Property</p>
-        <div className="flex flex-col gap-20 mt-10">
+        <div className="flex flex-col gap-20 mt-10 ">
           <motion.div
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
