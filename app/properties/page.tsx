@@ -1,12 +1,14 @@
 "use client";
-import React from "react";
+import React, { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { propertiesData } from "@/Data"; 
 import Link from "next/link";
 
-export default function PropertiesPage() {
+// 1. المكون اللي فيه الشغل والـ Logic
+function PropertiesList() {
   const searchParams = useSearchParams();
-    const typeFilter = searchParams.get("type"); 
+  const typeFilter = searchParams.get("type"); 
+
   const displayData = typeFilter 
     ? propertiesData.filter(item => item.type === typeFilter)
     : propertiesData;
@@ -19,6 +21,7 @@ export default function PropertiesPage() {
         </h1>
         <p className="text-gray-500 mt-2">Found {displayData.length} Results</p>
       </header>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {displayData.map((property) => (
           <div key={property.id} className="group border rounded-3xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all">
@@ -46,12 +49,24 @@ export default function PropertiesPage() {
         ))}
       </div>
       
-      {/* رسالة في حالة عدم وجود نتائج */}
       {displayData.length === 0 && (
         <div className="text-center py-20">
           <h2 className="text-2xl text-gray-400">No properties found in this category.</h2>
         </div>
       )}
     </div>
+  );
+}
+
+// 2. الصفحة الأساسية اللي بتعمل Export ومغلفة بـ Suspense
+export default function PropertiesPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center">
+        <p className="text-xl animate-pulse">Loading Properties...</p>
+      </div>
+    }>
+      <PropertiesList />
+    </Suspense>
   );
 }
