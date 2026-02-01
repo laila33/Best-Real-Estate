@@ -63,7 +63,6 @@ function NavBar() {
                 ? "text-blue-500 font-bold"
                 : "text-black dark:text-white list-none cursor-pointer flex items-center "
             }
-
             // "list-none cursor-pointer flex items-center "
           >
             Blog

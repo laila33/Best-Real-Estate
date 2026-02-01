@@ -35,7 +35,7 @@ export default function BlogDetails() {
 
   return (
     <div className="p-6 lg:p-20 mt-20 w- mx-auto">
-      <div className="h-30 w-full bg-linear-to-t from-blue-200 rounded-2xl mb-10 to-white hidden lg:flex  items-center justify-center gap-11">
+      <div className="dark:lg:hidden  h-30 w-full bg-linear-to-t from-blue-200 rounded-2xl mb-10 to-white hidden lg:flex   items-center justify-center gap-11">
         <div className="flex flex-col gap-3 mb-30 ">
           <div className="flex  gap-4">
             <p>08 Nov 2025</p>
@@ -114,21 +114,21 @@ export default function BlogDetails() {
           </p>{" "}
           <div className=" hidden lg:block h-0.5 w-180 bg-blue-50 m-5"></div>
           <p className="font-bold text-3xl">Tags</p>
-          <ul className="list-disc list-inside mt-5 text-gray-700 space-y-2">
+          <ul className="list-disc list-inside mt-5 text-gray-700  dark:text-white  space-y-2">
             <li>Trends</li>
             <li>Design</li>
             <li>Research</li>
           </ul>
           <div className="  hidden lg:block h-0.5 w-180 bg-blue-50 m-5"></div>
           <p className="font-bold text-3xl">Share</p>
-          <ul className="list-disc list-inside mt-5 text-gray-700 space-y-2">
+          <ul className="list-disc list-inside mt-5 text-gray-700 space-y-2 dark:text-white">
             <li>Facebook</li>
             <li>Twitter</li>
             <li>Linkedin</li>
           </ul>
         </div>
-        <div className="shadow-2xl shadow-black/20 flex flex-col gap-2 bg-white h-170  px-2 lg:px-10">
-          <p className="text-4xl mt-20 font-bold">Share</p>
+        <div className="shadow-2xl  rounded-2xl shadow-black/20 flex flex-col gap-2 bg-white h-170  px-2 lg:px-10">
+          <p className="text-4xl mt-20 font-bold dark:text-black">Share</p>
           <div className="h-15 w-60 bg-[#526FA3] rounded-2xl flex items-center p-2 gap-2">
             <Facebook className="text-white fill-white" size={20} />{" "}
             <p className="text-white text-2xl">Facebook</p>
@@ -142,7 +142,7 @@ export default function BlogDetails() {
             <p className="text-white text-2xl">Linked in</p>
           </div>
           <div className="flex flex-col mt-15 ">
-            <h1 className="text-2xl">Join our Newsletter</h1>
+            <h1 className="text-2xl dark:text-black">Join our Newsletter</h1>
             <input
               type="text"
               placeholder="Email"
